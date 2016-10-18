@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content=
+"width=device-width, initial-scale=1">
+<title>Una Scultura</title>
+<link rel="stylesheet" href="../css/main.css">
+<link rel="shortcut icon" href="../favicon.ico" type=
+"image/x-icon">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<style>
+        #sob,
+        #sobt,
+        #sobr,
+        #sobb,
+        #sobl,
+        #sobBack,
+        #sobPun {
+            width: 75%;
+            height: 75%;
+            position: absolute;
+            visibility: hidden
+        }
+
+        @media(min-width:970px) {
+            #dialog1,
+            #dialog2,
+            #dialog3,
+            #dialog4,
+            #dialog5 {
+                left: 75%
+            }
+        }
+</style>
+</head>
+<body onload='init();'>
+<svg id="sobBack" xmlns="http://www.w3.org/2000/svg" viewbox=
+"0 0 466.9226 506.92514" preserveaspectratio="xMinYMin meet">
+<path d=
+"M305.853 50.185c116.01 71.336 178.3 206.85 156.902 341.345l-38.695-14.247C438.934 264.11 387.092 151.29 291.536 88.87l14.317-38.685zm-427.125 125.43C-58.8 79.782 54.33 27.835 167.746 42.925L182.06 4.25C47.286-17.408-88.588 45.005-159.97 161.332l38.698 14.283zM378.303 501.14c-62.33 95.74-175.19 147.746-288.436 132.95l-14.22 38.707c134.586 21.308 270.147-41.178 341.36-157.4l-38.704-14.257zm-412.326 87.286c-95.985-62.373-148.078-175.512-133.09-288.978l-38.685-14.273c-21.538 134.823 41.042 270.71 157.547 341.97l14.227-38.72zm-16.117-348.5c43.022-78.094 132.807-119.372 220.096-101.18l14.114-38.136C75.677 75.194-37.09 127.06-88.326 225.912l38.186 14.013zm277.63-79.81c77.625 43.037 118.687 132.372 100.81 219.31l38.156 14.01c25.023-107.983-26.576-220.173-124.853-271.455l-14.114 38.136zm-198.384 356.5c-77.4-43.107-118.327-132.293-100.487-219.1l-38.16-14.005C-134.508 391.337-83.084 503.36 14.922 554.73l14.184-38.113zm277.95-79.61C263.972 515.2 174.006 556.47 86.61 538.09L72.414 576.2c108.525 25.662 221.516-26.206 272.83-125.172l-38.19-14.023zM58.918 293.302c17.477-26.923 49.297-41.444 81.11-36.955l14.222-38.427c-53.03-11.385-107.727 13.635-133.812 61.14l38.48 14.243zm114.704-24.387c26.924 17.48 41.447 49.302 36.953 81.118l38.428 14.225c11.382-53.037-13.628-107.734-61.14-133.82l-14.24 38.478zm24.38 114.708c-17.476 26.92-49.296 41.437-81.107 36.953L102.673 459c53.03 11.38 107.723-13.628 133.814-61.136l-38.484-14.243zM83.305 408c-26.92-17.475-41.44-49.29-36.957-81.104L7.92 312.674C-3.458 365.706 21.554 420.4 69.06 446.484L83.304 408z"
+opacity=".3" fill="#878787"></path>
+</svg><svg id="sob" xmlns="http://www.w3.org/2000/svg" viewbox=
+"0 0 437.27905 437.27885" preserveaspectratio="xMinYMin meet">
+<g>
+<path id="sobotkaPath" d=
+"M131.178 29.11c76.25-35.214 167.107-20.928 228.868 35.987L339.514 80.1c-53.036-46.28-128.675-58.185-193.36-30.428L131.18 29.11zm-81.44 262.17C21.858 226.47 33.814 150.637 80.29 97.55L65.318 76.994c-57.143 61.812-71.49 152.9-36.128 229.28l20.548-14.995zm337.756-145.386c27.88 64.7 16.048 140.413-30.22 193.516l15.02 20.52c56.898-61.838 71.103-152.787 35.738-229.044l-20.538 15.008zM291.52 387.44c-64.81 27.984-140.696 16.104-193.843-30.336l-20.54 14.99c61.88 57.1 153.03 71.364 229.407 35.87l-15.024-20.525zM107.053 276.71c-25.413-48.76-15.95-108.96 23.196-147.574l-14.763-20.27C65.422 155.85 53.55 231.47 86.817 291.535l20.236-14.824zm53.817-169.822c48.61-25.166 108.505-15.747 147.045 23.122l20.226-14.81C281.234 65.476 206 53.663 146.11 86.62l14.762 20.268zm115.332 223.608c-48.568 25.03-108.343 15.59-146.83-23.213l-20.222 14.813c46.846 49.643 121.933 61.485 181.78 28.7l-14.728-20.3zm54.03-169.915c25.44 48.827 15.913 109.118-23.368 147.722l14.726 20.303c50.233-46.967 62.184-122.703 28.88-182.846l-20.238 14.82zm-158.53 78.353c-7.858-18.17-4.45-39.468 8.72-54.273l-14.875-20.424c-23.955 23.346-29.787 59.975-14.298 89.595l20.453-14.897zm26.646-67.23c18.17-7.86 39.47-4.45 54.275 8.722l20.425-14.876c-23.348-23.958-59.978-29.79-89.6-14.3l14.9 20.453zm67.23 26.65c7.856 18.167 4.446 39.463-8.722 54.267l14.875 20.424c23.956-23.345 29.79-59.97 14.305-89.59l-20.456 14.898zm-26.645 67.225c-18.17 7.857-39.464 4.45-54.27-8.718l-20.426 14.876c23.346 23.95 59.975 29.782 89.593 14.296l-14.897-20.454z"
+fill="#fefadf"></path>
+</g>
+</svg><svg id="sobt" xmlns="http://www.w3.org/2000/svg" viewbox=
+"0 0 437.27905 437.27885" preserveaspectratio="xMinYMin meet"
+filter="url(#glow)">
+<path id="sobtPath" style="cursor: pointer;" d=
+"M131.178 29.11c76.25-35.214 167.107-20.928 228.868 35.987L339.514 80.1c-53.036-46.28-128.675-58.185-193.36-30.428z"
+fill="#fefadf"></path>
+<defs>
+<filter id="glow" x="-20%" y="-20%" width="500%" height="500%">
+<fegaussianblur id="glowfeGaussianBlur" stddeviation="5" result=
+"blur"></fegaussianblur>
+<femerge>
+<femergenode in="blur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+</svg><svg id="sobr" xmlns="http://www.w3.org/2000/svg" viewbox=
+"0 0 437.27905 437.27885" preserveaspectratio="xMinYMin meet"
+filter="url(#glow2)">
+<path id="sobrPath" style="cursor: pointer;" d=
+"M387.494 145.894c27.88 64.7 16.048 140.413-30.22 193.516l15.02 20.52c56.898-61.838 71.103-152.787 35.738-229.044z"
+fill="#fefadf"></path>
+<defs>
+<filter id="glow2" x="-20%" y="-20%" width="500%" height="500%">
+<fegaussianblur id="glowfeGaussianBlur" stddeviation="5" result=
+"blur"></fegaussianblur>
+<femerge>
+<femergenode in="blur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+</svg><svg id="sobb" xmlns="http://www.w3.org/2000/svg" viewbox=
+"0 0 437.27905 437.27885" preserveaspectratio="xMinYMin meet"
+filter="url(#glow3)">
+<path id="sobboPath" style="cursor: pointer;" d=
+"M291.52 387.44c-64.81 27.984-140.696 16.104-193.843-30.336l-20.54 14.99c61.88 57.1 153.03 71.364 229.407 35.87z"
+fill="#fefadf"></path>
+<defs>
+<filter id="glow3" x="-20%" y="-20%" width="500%" height="500%">
+<fegaussianblur id="glowfeGaussianBlur" stddeviation="5" result=
+"blur"></fegaussianblur>
+<femerge>
+<femergenode in="blur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+</svg><svg id="sobl" xmlns="http://www.w3.org/2000/svg" viewbox=
+"0 0 437.27905 437.27885" preserveaspectratio="xMinYMin meet"
+filter="url(#glow4)">
+<path id="soblPath" style="cursor: pointer;" d=
+"M49.738 291.28C21.858 226.47 33.814 150.637 80.29 97.55L65.318 76.994c-57.143 61.812-71.49 152.9-36.128 229.28z"
+fill="#fefadf"></path>
+<defs>
+<filter id="glow4" x="-20%" y="-20%" width="500%" height="500%">
+<fegaussianblur id="glowfeGaussianBlur" stddeviation="5" result=
+"blur"></fegaussianblur>
+<femerge>
+<femergenode in="blur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+</svg><svg id="sobPun" xmlns="http://www.w3.org/2000/svg" viewbox=
+"0 0 437.27905 437.27885" preserveaspectratio="xMinYMin meet">
+<circle id="sobPunPath" style="cursor: pointer;" cx="-218" cy=
+"-219.279" transform="scale(-1)" r="16" fill="#fefadf"></circle>
+</svg>
+<div id="dialog1">
+<div class="modalContent"><span class="closer" id="c1" onclick=
+"this.parentNode.parentNode.removeChild(this.parentNode);">×</span>
+<p>1) Nad městem Sobotka se tyčí kopec s malým zámečkem s
+neobvyklou špičatou střechou, na jejímž vrcholu se blyští zlatý
+půlměsíc. Na úpatí tohoto kopce vyznačil Ital Claudio Parmiggiani
+místo obklopené jabloňovým sadem. Zde stojí objekt z pálených
+cihel, z jehož středu lze spatřit onen půlměsíc a kterému se
+nepřezdívá jinak než <i>Parmiggiani</i>.</p>
+</div>
+</div>
+<div id="dialog2">
+<div class="modalContent"><span class="closer" id="c2" onclick=
+"this.parentNode.parentNode.removeChild(this.parentNode);">×</span>
+<p>2)Nad městem Sobotka se tyčí kopec s malým zámečkem s neobvyklou
+špičatou střechou, na jejímž vrcholu se blyští zlatý půlměsíc. Na
+úpatí tohoto kopce vyznačil Ital Claudio Parmiggiani místo
+obklopené jabloňovým sadem. Zde stojí objekt z pálených cihel, z
+jehož středu lze spatřit onen půlměsíc a kterému se nepřezdívá
+jinak než <i>Parmiggiani</i>.</p>
+</div>
+</div>
+<div id="dialog3">
+<div class="modalContent"><span class="closer" id="c3" onclick=
+"this.parentNode.parentNode.removeChild(this.parentNode);">×</span>
+<p>3)Nad městem Sobotka se tyčí kopec s malým zámečkem s neobvyklou
+špičatou střechou, na jejímž vrcholu se blyští zlatý půlměsíc. Na
+úpatí tohoto kopce vyznačil Ital Claudio Parmiggiani místo
+obklopené jabloňovým sadem. Zde stojí objekt z pálených cihel, z
+jehož středu lze spatřit onen půlměsíc a kterému se nepřezdívá
+jinak než <i>Parmiggiani</i>.</p>
+</div>
+</div>
+<div id="dialog4">
+<div class="modalContent"><span class="closer" id="c4" onclick=
+"this.parentNode.parentNode.removeChild(this.parentNode);">×</span>
+<p>4)Nad městem Sobotka se tyčí kopec s malým zámečkem s neobvyklou
+špičatou střechou, na jejímž vrcholu se blyští zlatý půlměsíc. Na
+úpatí tohoto kopce vyznačil Ital Claudio Parmiggiani místo
+obklopené jabloňovým sadem. Zde stojí objekt z pálených cihel, z
+jehož středu lze spatřit onen půlměsíc a kterému se nepřezdívá
+jinak než <i>Parmiggiani</i>.</p>
+</div>
+</div>
+<div id="dialog5">
+<div class="modalContent"><span class="closer" id="c5" onclick=
+"this.parentNode.parentNode.removeChild(this.parentNode);">×</span>
+<p>5)Nad městem Sobotka se tyčí kopec s malým zámečkem s neobvyklou
+špičatou střechou, na jejímž vrcholu se blyští zlatý půlměsíc. Na
+úpatí tohoto kopce vyznačil Ital Claudio Parmiggiani místo
+obklopené jabloňovým sadem. Zde stojí objekt z pálených cihel, z
+jehož středu lze spatřit onen půlměsíc a kterému se nepřezdívá
+jinak než <i>Parmiggiani</i>.</p>
+</div>
+</div>
+<div class="compass" id="north"><svg xmlns=
+"http://www.w3.org/2000/svg" viewbox="0 0 148 148"
+preserveaspectratio="xMinYMin meet">
+<path d=
+"M74.272 10C38.775 10 10 38.775 10 74.272c0 35.496 28.775 64.27 64.272 64.27 35.497 0 64.272-28.774 64.272-64.27C138.544 38.775 109.768 10 74.272 10zm0 122.858c-32.357 0-58.587-26.23-58.587-58.586 0-32.357 26.23-58.586 58.587-58.586s58.586 26.23 58.586 58.586c0 32.356-26.23 58.586-58.586 58.586z"
+fill="#FFFFDD"></path>
+<path d=
+"M74.024 28.02c-11.957 11.65-19.53 28.818-19.53 47.982 0 19.164 7.573 36.333 19.53 47.98 11.957-11.647 19.53-28.816 19.53-47.98 0-19.164-7.574-36.333-19.53-47.98zM61.61 77.39c3.767-1.845 7.87-2.87 12.167-2.87 4.483 0 8.756 1.11 12.655 3.108-.335 13.264-4.747 25.88-12.41 35.742-7.705-9.92-12.125-22.63-12.413-35.98z"
+fill="#FFFFDD"></path>
+</svg></div>
+<script async src=
+"https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js">
+</script>
+<script async src="../js/sobotka.js">
+</script>
+</body>
+</html>
