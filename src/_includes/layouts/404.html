@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html class="text-gray-900 antialiased leading-tight" lang="cs">
+<html class="antialiased" lang="cs">
 
 <head>
     {% include "partials/site-head.html" %}
 </head>
 
-<body class="min-h-screen bg-white">
-    <main class="flex items-center justify-center min-h-screen bg-red-700">
+<body class="min-h-screen bg-black text-yellow-100">
+    <main class="flex items-center justify-center min-h-screen">
         <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-            <h2 class="animate-pulse text-7xl leading-10 font-extrabold text-white">
-                404
-            </h2>
-            <p class="mt-4 text-lg leading-6 text-red-200">
-                Take me back
-                <a href="/" class="font-bold underline transition duration-150 ease-in-out">
-                    home
-                </a>
+            <h1 class="text-5xl leading-1 font-extrabold">
+                404 - stránka nebyla nalezena
+            </h1>
+            <p class="my-6 text-base">
+                Zkuste se vrátit na <a href="/" class="font-bold underline"> úvodní stránku</a>.
             </p>
+            <div class="w-24 mx-auto">
+                {{ '/src/images/vectors/compass.svg' | svgContents }}
+            </div>
         </div>
     </main>
 </body>
