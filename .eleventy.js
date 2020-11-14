@@ -5,6 +5,8 @@ module.exports = function (config) {
         dynamicPartials: true,
     })
 
+    config.addFilter('svgContents', require('./utils/svgContents.js'))
+
     // Static assets to pass through
     config.addPassthroughCopy('./src/fonts')
     config.addPassthroughCopy('./src/images')
