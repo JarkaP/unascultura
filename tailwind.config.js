@@ -6,7 +6,10 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+                sans: ['OPTIMA CE', ...defaultTheme.fontFamily.sans],
+            },
+            fontSize: {
+                base: ['18px', '24px'],
             },
         },
     },
