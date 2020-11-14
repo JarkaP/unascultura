@@ -1,0 +1,64 @@
+{
+    "name": "una-scultura",
+    "description": "Based on stefanfrede/11st-starter-kit",
+    "version": "1.0.0",
+    "engines": {
+        "node": "12.x.x",
+        "npm": "6.x.x"
+    },
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:JarkaP/unascultura.git"
+    },
+    "author": {
+        "name": "",
+        "email": ""
+    },
+    "license": "MIT",
+    "private": true,
+    "browserslist": [
+        "defaults",
+        "maintained node versions",
+        "> 5%"
+    ],
+    "scripts": {
+        "clean": "rimraf build",
+        "serve": "serve --no-clipboard --listen 8080 dist",
+        "dev": "run-s clean dev:*",
+        "dev:snowpack": "snowpack dev",
+        "build": "run-s clean build:*",
+        "build:snowpack": "snowpack build",
+        "setup": "npm install && npm run validate"
+    },
+    "devDependencies": {
+        "@11ty/eleventy": "^0.11.1",
+        "@babel/core": "^7.11.6",
+        "@babel/preset-env": "^7.11.5",
+        "@snowpack/plugin-build-script": "^2.0.11",
+        "@snowpack/plugin-optimize": "^0.2.8",
+        "@snowpack/plugin-postcss": "^1.0.7",
+        "@snowpack/plugin-run-script": "^2.2.0",
+        "autoprefixer": "^10.0.1",
+        "babel-eslint": "^10.1.0",
+        "browserslist": "^4.14.6",
+        "core-js": "^3.7.0",
+        "eslint": "^7.13.0",
+        "eslint-config-prettier": "^6.15.0",
+        "eslint-plugin-html": "^6.1.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-prettier": "^3.1.4",
+        "npm-run-all": "^4.1.5",
+        "postcss": "^8.1.6",
+        "postcss-100vh-fix": "^1.0.2",
+        "postcss-cli": "^8.2.0",
+        "prettier": "^2.1.2",
+        "rimraf": "^3.0.2",
+        "serve": "^11.3.2",
+        "snowpack": "^2.17.0",
+        "stylelint": "^13.7.2",
+        "stylelint-config-prettier": "^8.0.2",
+        "stylelint-config-standard": "^20.0.0",
+        "tailwindcss": "^1.9.6"
+    }
+}
