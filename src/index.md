@@ -2,7 +2,6 @@
 layout: 'layouts/home.html'
 title: 'Una Scultura'
 intro:
-  title: 'Site misteriosi'
-  desc:
-    'Vstupte'
+  enter: 'siate misteriosi'
+  enter-hover: 'buďte tajemní'
 ---
