@@ -9,6 +9,9 @@ npm run build
 # navigate into the build output directory
 cd dist
 
+# create empty .nojekyll which tells GitHub Pages not to run the published files through Jekyll
+touch .nojekyll
+
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
 

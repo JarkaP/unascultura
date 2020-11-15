@@ -1,10 +1,12 @@
 const fs = require('fs')
+const isProduction = process.env.NODE_ENV === `production`
 
 module.exports = function (config) {
     config.setLiquidOptions({
         dynamicPartials: true,
     })
 
+    // Filter to output svg directly to template
     config.addFilter('svgContents', require('./utils/svgContents.js'))
 
     // Static assets to pass through
@@ -40,5 +42,6 @@ module.exports = function (config) {
         htmlTemplateEngine: 'liquid',
         dataTemplateEngine: 'liquid',
         markdownTemplateEngine: 'liquid',
+        pathPrefix: isProduction ? `/unascultura/` : `/`,
     }
 }

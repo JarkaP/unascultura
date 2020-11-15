@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html class="text-gray-900 antialiased leading-tight" lang="en">
-
+<html class="antialiased" lang="cs">
 <head>
     {% include "partials/site-head.html" %}
 </head>
-
 <body class="min-h-screen bg-black text-yellow-100">
     {% include "partials/site-header.html" %}
     <main id="main-content" tabindex="-1">
         {% block content %}{% endblock %}
     </main>
     {% include "partials/site-footer.html" %}
-    <script type="module" src="/_dist_/index.js"></script>
+    <script type="module" src="{{ '/_dist_/index.js' | url }}"></script>
 </body>
-
 </html>

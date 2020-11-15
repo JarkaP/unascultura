@@ -24,6 +24,7 @@
         "NODE_ENV": true
     },
     "buildOptions": {
+        "baseUrl": "/unascultura/",
         "clean": true,
         "out": "dist"
     },
