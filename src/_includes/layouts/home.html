@@ -1,9 +1,9 @@
 {% layout 'base.html' %}
 
 {% block content %}
-<section class="home max-w-6xl mx-auto text-center px-4 sm:px-6 lg:px-8 flex items-center justify-center min-h-screen">
+<section class="flex items-center justify-center max-w-6xl min-h-screen px-4 mx-auto text-center home sm:px-6 lg:px-8">
     <div class="py-10 md:py-20">
-        <h1 class="text-4xl md:text-6xl font-extrabold">
+        <h1 class="text-4xl font-extrabold md:text-6xl">
             <a href="{{ '/sobotka' | url }}" onmouseover="this.textContent='{{ intro.enter-hover }}';"
                 onmouseout="this.textContent='{{ intro.enter }}';">
                 {{ intro.enter }}
