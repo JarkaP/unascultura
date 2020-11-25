@@ -3,12 +3,12 @@
 <head>
     {% include "partials/site-head.html" %}
 </head>
-<body class="min-h-screen bg-black text-yellow-100">
+<body class="min-h-screen text-yellow-100 bg-black">
     {% include "partials/site-header.html" %}
     <main id="main-content" tabindex="-1">
         {% block content %}{% endblock %}
     </main>
     {% include "partials/site-footer.html" %}
-    <script type="module" src="{{ '/_dist_/index.js' | url }}"></script>
+    <script type="module" src="{{ '/_dist_/index.js' | url }}?{{ nanoid }}"></script>
 </body>
 </html>
